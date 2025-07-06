@@ -64,8 +64,8 @@ nav {
 /* HERO SECTION */
 #hero {
   height: 100vh;
-  background: linear-gradient(rgba(75,124,72,0.6), rgba(75,124,72,0.6)),
-    url('/mnt/data/bc9cc783-83e2-4b74-b3e0-1eacec4d0253.png') center center/cover no-repeat;
+  background: linear-gradient(rgba(75,124,72,0.5), rgba(75,124,72,0.5)),
+    url('img/sfondo-gallina.jpg') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,6 +74,7 @@ nav {
   text-align: center;
   padding: 0 20px;
   padding-top: 80px; /* per navbar fissa */
+  position: relative;
 }
 
 .hero-content h1 {
