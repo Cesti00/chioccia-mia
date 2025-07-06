@@ -65,7 +65,7 @@ nav {
 #hero {
   height: 100vh;
   background: linear-gradient(rgba(75,124,72,0.5), rgba(75,124,72,0.5)),
-    url('./img/sfondo-gallina.jpg') center center/cover no-repeat;
+    url('./gallina.jpg') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
