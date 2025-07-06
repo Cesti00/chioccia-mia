@@ -1,11 +1,11 @@
-/* Variabili colori */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+
 :root {
   --verde-chioccia: #4b7c48;
   --verde-chioccia-chiaro: #7da45f;
   --verde-chioccia-scuro: #557a3c;
 }
 
-/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@
 }
 
 html {
-  scroll-padding-top: 70px; /* navbar fissa altezza */
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -23,7 +23,6 @@ body {
   color: #333;
 }
 
-/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
@@ -61,11 +60,9 @@ nav {
   transform: scale(1.05);
 }
 
-/* HERO SECTION */
 #hero {
   height: 100vh;
-  background: linear-gradient(rgba(75,124,72,0.5), rgba(75,124,72,0.5)),
-    url('./gallina.jpg') center center/cover no-repeat;
+  background: url('img/sfondo-gallina.jpg') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,20 +70,22 @@ nav {
   color: #fff;
   text-align: center;
   padding: 0 20px;
-  padding-top: 80px; /* per navbar fissa */
+  padding-top: 80px;
   position: relative;
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary {
@@ -107,7 +106,6 @@ nav {
   background-color: var(--verde-chioccia-scuro);
 }
 
-/* SEZIONI */
 .container {
   max-width: 1000px;
   margin: 60px auto;
@@ -172,7 +170,6 @@ form button:hover {
   background-color: var(--verde-chioccia-scuro);
 }
 
-/* FOOTER */
 footer {
   background-color: var(--verde-chioccia);
   color: white;
@@ -182,12 +179,11 @@ footer {
   margin-top: 80px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links {
     gap: 15px;
   }
-  
+
   .hero-content h1 {
     font-size: 2.3rem;
   }
