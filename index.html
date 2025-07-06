@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chioccia Mia!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Quicksand', sans-serif;
@@ -22,19 +22,25 @@
       margin: 0;
     }
     nav {
+      background-color: #a3b18a;
+      padding: 1rem;
       text-align: center;
-      margin-top: 1rem;
     }
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #3e2f1c;
+      color: #fff;
       font-weight: bold;
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+    }
+    section img {
+      max-width: 100%;
+      border-radius: 1rem;
+      margin-top: 1rem;
     }
     .cta {
       background-color: #a3b18a;
@@ -42,19 +48,7 @@
       text-align: center;
       border-radius: 1rem;
       margin-top: 2rem;
-    }
-    .cta h2 {
-      margin: 0 0 1rem;
-    }
-    .cta button {
-      background-color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      color: #3e2f1c;
-      font-weight: bold;
+      color: #fff;
     }
     footer {
       background-color: #fcd45c;
@@ -67,34 +61,65 @@
 <body>
   <header>
     <h1>Chioccia Mia!</h1>
-    <p>Uova biologiche con amore, dal nostro nido al tuo</p>
+    <p>Uova biologiche, galline felici, allevamento etico</p>
   </header>
   <nav>
     <a href="#chi-siamo">Chi siamo</a>
-    <a href="#abbonamenti">Abbonamenti</a>
+    <a href="#metodo">Metodo</a>
+    <a href="#prodotti">Prodotti</a>
+    <a href="#abbonamento">Adotta una gallina</a>
     <a href="#contatti">Contatti</a>
   </nav>
+
   <section id="chi-siamo">
     <h2>Chi siamo</h2>
     <p>
-      Chioccia Mia è un piccolo progetto agricolo nato per riportare valore, calore e rispetto alla produzione di uova. Le nostre galline sono allevate all’aperto, con cura e attenzione, e le uova arrivano a casa tua fresche ogni settimana.
+      Chioccia Mia nasce dal desiderio di riportare equilibrio tra natura e nutrimento, offrendo uova biologiche prodotte con rispetto per gli animali e per l’ambiente. La nostra è una piccola realtà agricola dove ogni scelta mette al centro il benessere delle galline e la qualità del prodotto.
     </p>
+    <img src="https://via.placeholder.com/800x400?text=Galline+felici" alt="Galline nel prato">
   </section>
-  <section id="abbonamenti">
-    <h2>Abbonamenti</h2>
+
+  <section id="metodo">
+    <h2>Come alleviamo</h2>
     <p>
-      Offriamo un abbonamento annuale: 6 uova bio alla settimana, consegnate direttamente a casa tua. Nessun pensiero, solo bontà.
+      Le nostre galline razzolano libere in spazi ampi, si nutrono in modo naturale e vivono seguendo i ritmi della natura. Nessun compromesso: niente gabbie, niente forzature, solo un ambiente sereno per un prodotto sano.
+    </p>
+    <img src="https://via.placeholder.com/800x400?text=Allevamento+all%27aperto" alt="Allevamento all'aperto">
+  </section>
+
+  <section id="prodotti">
+    <h2>I nostri prodotti</h2>
+    <h3>🥚 Uova biologiche</h3>
+    <p>Vendita diretta a privati, negozi, bar e ristoranti. Contattaci per ricevere il listino o fare un ordine personalizzato.</p>
+
+    <h3>🐔 Galli e galline ornamentali</h3>
+    <p>Alleviamo razze ornamentali rare e selezionate. Ideali per chi ama la biodiversità o cerca esemplari unici.</p>
+
+    <h3>🥚 Uova fecondate</h3>
+    <p>Uova fecondate di razze ornamentali disponibili su richiesta, con spedizione sicura e assistenza nella schiusa.</p>
+    <img src="https://via.placeholder.com/800x400?text=Prodotti+Chioccia+Mia" alt="Uova e galline ornamentali">
+  </section>
+
+  <section id="abbonamento">
+    <h2>Adotta una gallina</h2>
+    <p>
+      Con l’abbonamento annuale “Adotta una gallina” ricevi ogni settimana uova fresche, prodotte proprio dalla tua gallina. Un gesto simbolico e sostenibile per supportare l’allevamento etico.
     </p>
     <div class="cta">
-      <h2>€200/anno</h2>
-      <p>Abbonati ora e ricevi ogni settimana un dono dal nostro nido</p>
+      <h3>€200/anno</h3>
+      <p>6 uova a settimana direttamente a casa tua</p>
       <button>Pre-ordina</button>
     </div>
   </section>
+
   <section id="contatti">
-    <h2>Contattaci</h2>
-    <p>Per informazioni, scrivi a <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a></p>
+    <h2>Contatti</h2>
+    <p>Scrivici per ordini, domande o collaborazioni:</p>
+    <p>Email: <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a></p>
+    <p>Instagram: <a href="#">@chioccia_mia</a></p>
+    <img src="https://via.placeholder.com/800x300?text=Contattaci" alt="Contatti">
   </section>
+
   <footer>
     <p>&copy; 2025 Chioccia Mia. Tutti i diritti riservati.</p>
   </footer>
