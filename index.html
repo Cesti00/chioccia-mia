@@ -2,81 +2,208 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chioccia Mia!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
   <style>
+    /* Reset e base */
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Quicksand', sans-serif;
       margin: 0;
       background-color: #fff8e1;
       color: #3e2f1c;
+      line-height: 1.6;
     }
+    a {
+      color: #2e4a1f;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #5a7c31;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #a3b18a;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+    nav ul li a {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: white;
+    }
+    nav ul li a:hover {
+      color: #fcd45c;
+    }
+
+    /* Header */
     header {
       background-color: #fcd45c;
-      padding: 2rem;
+      padding: 6rem 2rem 3rem; /* spaziatura per navbar fissa */
       text-align: center;
+      box-shadow: inset 0 -4px 10px rgba(0,0,0,0.1);
     }
     header h1 {
-      font-size: 3rem;
-      margin: 0;
+      font-size: 3.8rem;
+      margin-bottom: 0.2rem;
+      letter-spacing: 2px;
+      color: #3e2f1c;
+      text-shadow: 1px 1px 2px #a39a6e;
     }
-    nav {
-      background-color: #a3b18a;
-      padding: 1rem;
-      text-align: center;
+    header p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #4b3e1c;
     }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
+
+    /* Sezioni */
     section {
-      padding: 2rem;
       max-width: 900px;
-      margin: auto;
+      margin: 3rem auto;
+      padding: 1.5rem 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    section:nth-child(even) {
+      background-color: #f9f6e8;
+    }
+    section:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    section h2 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      color: #2e4a1f;
+      border-bottom: 3px solid #a3b18a;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    section h3 {
+      color: #5a7c31;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #4a3e1c;
     }
     section img {
       max-width: 100%;
-      border-radius: 1rem;
       margin-top: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
+
+    /* Call to action */
     .cta {
-      background-color: #a3b18a;
+      background-color: #5a7c31;
+      color: white;
       padding: 2rem;
-      text-align: center;
-      border-radius: 1rem;
       margin-top: 2rem;
-      color: #fff;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
     }
+    .cta h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+    .cta button {
+      background-color: #fcd45c;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      color: #3e2f1c;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease;
+    }
+    .cta button:hover {
+      background-color: #f3d23e;
+    }
+
+    /* Footer */
     footer {
       background-color: #fcd45c;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1.2rem;
+      margin-top: 3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #3e2f1c;
+      box-shadow: inset 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      nav ul li {
+        margin: 0;
+      }
+      header h1 {
+        font-size: 2.8rem;
+      }
+      section {
+        margin: 2rem 1rem;
+        padding: 1.2rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#chi-siamo">Chi siamo</a></li>
+      <li><a href="#metodo">Metodo</a></li>
+      <li><a href="#prodotti">Prodotti</a></li>
+      <li><a href="#abbonamento">Adotta una gallina</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Chioccia Mia!</h1>
     <p>Uova biologiche, galline felici, allevamento etico</p>
   </header>
-  <nav>
-    <a href="#chi-siamo">Chi siamo</a>
-    <a href="#metodo">Metodo</a>
-    <a href="#prodotti">Prodotti</a>
-    <a href="#abbonamento">Adotta una gallina</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
 
   <section id="chi-siamo">
     <h2>Chi siamo</h2>
     <p>
       Chioccia Mia nasce dal desiderio di riportare equilibrio tra natura e nutrimento, offrendo uova biologiche prodotte con rispetto per gli animali e per l’ambiente. La nostra è una piccola realtà agricola dove ogni scelta mette al centro il benessere delle galline e la qualità del prodotto.
     </p>
-    <img src="https://via.placeholder.com/800x400?text=Galline+felici" alt="Galline nel prato">
+    <img src="https://via.placeholder.com/800x400?text=Galline+felici" alt="Galline nel prato" />
   </section>
 
   <section id="metodo">
@@ -84,7 +211,7 @@
     <p>
       Le nostre galline razzolano libere in spazi ampi, si nutrono in modo naturale e vivono seguendo i ritmi della natura. Nessun compromesso: niente gabbie, niente forzature, solo un ambiente sereno per un prodotto sano.
     </p>
-    <img src="https://via.placeholder.com/800x400?text=Allevamento+all%27aperto" alt="Allevamento all'aperto">
+    <img src="https://via.placeholder.com/800x400?text=Allevamento+all%27aperto" alt="Allevamento all'aperto" />
   </section>
 
   <section id="prodotti">
@@ -97,27 +224,22 @@
 
     <h3>🥚 Uova fecondate</h3>
     <p>Uova fecondate di razze ornamentali disponibili su richiesta, con spedizione sicura e assistenza nella schiusa.</p>
-    <img src="https://via.placeholder.com/800x400?text=Prodotti+Chioccia+Mia" alt="Uova e galline ornamentali">
+    <img src="https://via.placeholder.com/800x400?text=Prodotti+Chioccia+Mia" alt="Uova e galline ornamentali" />
   </section>
 
   <section id="abbonamento">
     <h2>Adotta una gallina</h2>
-    <p>
-      Con l’abbonamento annuale “Adotta una gallina” ricevi ogni settimana uova fresche, prodotte proprio dalla tua gallina. Un gesto simbolico e sostenibile per supportare l’allevamento etico.
-    </p>
+    <p>Un’opzione speciale per restare vicino al nostro allevamento: con l’abbonamento ricevi uova fresche direttamente dal tuo “nido” e sostieni il nostro lavoro.</p>
     <div class="cta">
-      <h3>€200/anno</h3>
-      <p>6 uova a settimana direttamente a casa tua</p>
-      <button>Pre-ordina</button>
+      <h3>€200 / anno</h3>
+      <p>6 uova biologiche alla settimana, consegna a domicilio.</p>
+      <button>Pre-ordina ora</button>
     </div>
   </section>
 
   <section id="contatti">
-    <h2>Contatti</h2>
-    <p>Scrivici per ordini, domande o collaborazioni:</p>
-    <p>Email: <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a></p>
-    <p>Instagram: <a href="#">@chioccia_mia</a></p>
-    <img src="https://via.placeholder.com/800x300?text=Contattaci" alt="Contatti">
+    <h2>Contattaci</h2>
+    <p>Per informazioni o ordini scrivici a <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a> oppure chiamaci al <strong>+39 333 1234567</strong>.</p>
   </section>
 
   <footer>
