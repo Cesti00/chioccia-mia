@@ -1,51 +1,113 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chioccia Mia</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chioccia Mia - Dal nostro nido al tuo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav>
+    <div class="container nav-container">
+      <a href="#hero" class="logo">Chioccia Mia</a>
+      <ul class="nav-links">
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#valori">Benessere & Qualità</a></li>
+        <li><a href="#adotta">Adotta una gallina</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+      <button id="nav-toggle" aria-label="Apri menu">&#9776;</button>
+    </div>
+  </nav>
+
   <header id="hero">
-    <h1>Chioccia Mia</h1>
-    <p class="slogan">Dal nostro nido al tuo</p>
-    <a href="#adotta" class="btn">Adotta una gallina</a>
+    <div class="container hero-content">
+      <h1>Chioccia Mia</h1>
+      <h2>Dal nostro nido al tuo</h2>
+      <p>Uova biologiche di qualità, galline felici, rispetto e sostenibilità.</p>
+      <a href="#adotta" class="btn-primary">Adotta una gallina</a>
+    </div>
   </header>
 
-  <section id="chi-siamo">
-    <h2>Chi siamo</h2>
-    <p>Azienda agricola biologica dedicata al benessere delle galline e alla qualità delle uova.</p>
-  </section>
+  <main>
+    <section id="chi-siamo" class="section">
+      <div class="container">
+        <h2>Chi siamo</h2>
+        <p>Chioccia Mia è un’azienda agricola biologica che pone il benessere delle galline al centro della propria attività, producendo uova genuine e di alta qualità in ambienti sani e rispettosi.</p>
+      </div>
+    </section>
 
-  <section id="valori">
-    <h2>Il nostro impegno</h2>
-    <ul>
-      <li>Galline libere e felici, spazio minimo 4 m² ciascuna.</li>
-      <li>Mangimi biologici di alta qualità, senza additivi.</li>
-      <li>Rispetto dell’ambiente e sostenibilità.</li>
-    </ul>
-  </section>
+    <section id="valori" class="section bg-light">
+      <div class="container">
+        <h2>Benessere & Qualità</h2>
+        <ul class="valori-list">
+          <li><strong>Galline libere e felici:</strong> ogni gallina dispone di ampi spazi all'aperto e al chiuso.</li>
+          <li><strong>Mangimi biologici:</strong> alimentazione naturale senza additivi o OGM.</li>
+          <li><strong>Sostenibilità ambientale:</strong> pratiche agricole responsabili e a basso impatto.</li>
+          <li><strong>Produzione controllata:</strong> ogni uovo è tracciato e garantito da certificazioni biologiche.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="adotta">
-    <h2>Adotta una gallina</h2>
-    <p>Sostieni il nostro progetto con un abbonamento annuale e ricevi uova a domicilio ogni settimana.</p>
-    <form action="#" method="post">
-      <label>Nome completo:<input type="text" name="name" required></label>
-      <label>Email:<input type="email" name="email" required></label>
-      <label>Indirizzo:<input type="text" name="address" required></label>
-      <button type="submit">Adotta ora</button>
-    </form>
-  </section>
+    <section id="adotta" class="section">
+      <div class="container">
+        <h2>Adotta una gallina</h2>
+        <p>Con la nostra formula in abbonamento, puoi sostenere direttamente la nostra azienda e ricevere a domicilio uova fresche ogni settimana per tutto l’anno.</p>
+        <form action="#" method="post" class="form-adotta">
+          <label for="name">Nome completo</label>
+          <input type="text" id="name" name="name" required placeholder="Mario Rossi" />
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="mario@mail.it" />
+          
+          <label for="address">Indirizzo di consegna</label>
+          <input type="text" id="address" name="address" required placeholder="Via Roma 123, Milano" />
+          
+          <button type="submit" class="btn-primary">Adotta ora</button>
+        </form>
+      </div>
+    </section>
 
-  <section id="contatti">
-    <h2>Contatti</h2>
-    <p>Email: info@chioccciamialternative.it</p>
-    <p>Telefono: +39 012 3456789</p>
-  </section>
+    <section id="contatti" class="section bg-light">
+      <div class="container">
+        <h2>Contatti</h2>
+        <p>Email: <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a></p>
+        <p>Telefono: <a href="tel:+390123456789">+39 012 3456789</a></p>
+        <p>Seguici su:
+          <a href="#" aria-label="Facebook" class="social-link">Facebook</a> | 
+          <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+        </p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Chioccia Mia. Tutti i diritti riservati.</p>
+    <div class="container">
+      <p>© 2025 Chioccia Mia - Tutti i diritti riservati.</p>
+    </div>
   </footer>
+
+<script>
+  // Toggle menu mobile
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-open');
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target) target.scrollIntoView({ behavior: 'smooth' });
+      // chiudi menu se aperto
+      navLinks.classList.remove('nav-open');
+    });
+  });
+</script>
+
 </body>
 </html>
