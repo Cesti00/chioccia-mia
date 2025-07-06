@@ -1,218 +1,51 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chioccia Mia!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80'); /* prato vero */
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center bottom;
-      color: #3e2f1c;
-      position: relative;
-      overflow-x: hidden;
-    }
-    header, nav, section, footer {
-      background-color: rgba(255, 248, 225, 0.85); /* sfondo chiaro semitrasparente */
-      border-radius: 10px;
-      max-width: 900px;
-      margin: 1rem auto;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 10;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      text-align: center;
-    }
-    header p {
-      text-align: center;
-      margin-top: 0.5rem;
-      font-weight: 500;
-    }
-    nav {
-      text-align: center;
-      margin-top: 0;
-      padding-bottom: 0;
-    }
-    nav a {
-      margin: 0 1.5rem;
-      text-decoration: none;
-      color: #3e2f1c;
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-    section h2 {
-      margin-top: 0;
-      font-weight: 700;
-      font-size: 2rem;
-      border-bottom: 2px solid #a3b18a;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-    }
-    .cta {
-      background-color: #a3b18acc;
-      text-align: center;
-      padding: 2rem;
-      border-radius: 1rem;
-      margin-top: 1rem;
-    }
-    .cta h2 {
-      margin: 0 0 1rem 0;
-      font-size: 2rem;
-    }
-    .cta button {
-      background-color: #fff;
-      border: none;
-      padding: 0.75rem 2rem;
-      font-size: 1.1rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      font-weight: 700;
-      color: #3e2f1c;
-      transition: background-color 0.3s ease;
-    }
-    .cta button:hover {
-      background-color: #fcd45c;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #5a4c20;
-      margin-bottom: 2rem;
-      padding: 1rem 0;
-    }
-
-    /* Galline stilizzate */
-    .chicken {
-      position: fixed;
-      width: 60px;
-      height: 45px;
-      background: #f4c542;
-      border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
-      top: 75%;
-      animation: gentle-move 4s ease-in-out infinite;
-      z-index: 5;
-      filter: drop-shadow(1px 2px 1px rgba(0,0,0,0.15));
-    }
-    .chicken::before {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      background: #f4c542;
-      border-radius: 50%;
-      top: -15px;
-      left: 15px;
-    }
-    .chicken::after {
-      content: '';
-      position: absolute;
-      width: 15px;
-      height: 7px;
-      background: #d84315;
-      border-radius: 50% / 100%;
-      top: 4px;
-      left: 5px;
-      transform: rotate(20deg);
-    }
-    .chicken:nth-child(1) {
-      left: 20%;
-      animation-delay: 0s;
-    }
-    .chicken:nth-child(2) {
-      left: 55%;
-      animation-delay: 2s;
-    }
-    .chicken:nth-child(3) {
-      left: 75%;
-      animation-delay: 1s;
-    }
-
-    /* Uova stilizzate */
-    .egg {
-      position: fixed;
-      width: 25px;
-      height: 35px;
-      background: #fff9c4;
-      border-radius: 50% 50% 60% 60% / 70% 70% 50% 50%;
-      top: 85%;
-      box-shadow: inset 4px 4px 8px rgba(0,0,0,0.1);
-      z-index: 5;
-      filter: drop-shadow(0 2px 1px rgba(0,0,0,0.1));
-    }
-    .egg:nth-child(4) {
-      left: 30%;
-    }
-    .egg:nth-child(5) {
-      left: 60%;
-    }
-
-    @keyframes gentle-move {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chioccia Mia</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Chioccia Mia!</h1>
-    <p>Uova biologiche con amore, dal nostro nido al tuo</p>
+  <header id="hero">
+    <h1>Chioccia Mia</h1>
+    <p class="slogan">Dal nostro nido al tuo</p>
+    <a href="#adotta" class="btn">Adotta una gallina</a>
   </header>
-  <nav>
-    <a href="#chi-siamo">Chi siamo</a>
-    <a href="#prodotti">Prodotti</a>
-    <a href="#abbonamenti">Abbonamenti</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
 
   <section id="chi-siamo">
     <h2>Chi siamo</h2>
-    <p>
-      Siamo un allevamento biologico che rispetta il benessere delle galline e l'ambiente. Le nostre uova fresche arrivano direttamente dal nostro nido a casa tua, garantendo qualità e genuinità.
-    </p>
+    <p>Azienda agricola biologica dedicata al benessere delle galline e alla qualità delle uova.</p>
   </section>
 
-  <section id="prodotti">
-    <h2>Prodotti</h2>
-    <p>
-      Vendiamo uova biologiche a privati, negozi, bar e ristoranti. Offriamo anche galli e galline ornamentali di razze esclusive e uova fecondate di queste razze.
-    </p>
+  <section id="valori">
+    <h2>Il nostro impegno</h2>
+    <ul>
+      <li>Galline libere e felici, spazio minimo 4 m² ciascuna.</li>
+      <li>Mangimi biologici di alta qualità, senza additivi.</li>
+      <li>Rispetto dell’ambiente e sostenibilità.</li>
+    </ul>
   </section>
 
-  <section id="abbonamenti">
-    <h2>Abbonamenti</h2>
-    <p>
-      Il nostro servizio di abbonamento “Adotta una gallina” è un’opzione in più per i clienti che desiderano un contatto speciale con il nostro allevamento.
-    </p>
-    <div class="cta">
-      <h2>€200/anno</h2>
-      <p>Abbonati ora e ricevi ogni settimana un dono dal nostro nido</p>
-      <button>Pre-ordina</button>
-    </div>
+  <section id="adotta">
+    <h2>Adotta una gallina</h2>
+    <p>Sostieni il nostro progetto con un abbonamento annuale e ricevi uova a domicilio ogni settimana.</p>
+    <form action="#" method="post">
+      <label>Nome completo:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Indirizzo:<input type="text" name="address" required></label>
+      <button type="submit">Adotta ora</button>
+    </form>
   </section>
 
   <section id="contatti">
-    <h2>Contattaci</h2>
-    <p>Per informazioni, scrivi a <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a></p>
+    <h2>Contatti</h2>
+    <p>Email: info@chioccciamialternative.it</p>
+    <p>Telefono: +39 012 3456789</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Chioccia Mia. Tutti i diritti riservati.</p>
   </footer>
-
-  <div class="chicken"></div>
-  <div class="chicken"></div>
-  <div class="chicken"></div>
-
-  <div class="egg"></div>
-  <div class="egg"></div>
 </body>
 </html>
