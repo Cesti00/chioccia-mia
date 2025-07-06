@@ -2,159 +2,205 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chioccia Mia!</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background: linear-gradient(to top, #4caf50 0%, #81c784 100%);
+      position: relative;
+      overflow-x: hidden;
       color: #3e2f1c;
     }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto 4rem;
-      padding: 0 1rem;
-    }
-
-    header, nav, section, footer {
-      background-color: #fff; /* sfondo bianco opaco */
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
     header {
+      background-color: #fcd45ccc; /* leggermente trasparente per vedere lo sfondo */
+      padding: 2rem;
       text-align: center;
-      border-bottom: 3px solid #a3b18a;
-      margin-bottom: 3rem;
+      position: relative;
+      z-index: 10;
     }
-
     header h1 {
       font-size: 3rem;
       margin: 0;
     }
-
     nav {
       text-align: center;
-      padding: 1rem 0;
-      border-radius: 8px;
-      margin-bottom: 3rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+      position: relative;
+      z-index: 10;
     }
-
     nav a {
+      margin: 0 1rem;
       text-decoration: none;
-      margin: 0 1.2rem;
       color: #3e2f1c;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
+      font-weight: bold;
     }
-
-    nav a:hover {
-      color: #a3b18a;
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff8e1cc; /* sfondo chiaro semitrasparente per leggibilità */
+      border-radius: 10px;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
     }
-
-    section h2 {
-      margin-top: 0;
-      color: #3e2f1c;
-    }
-
     .cta {
-      background-color: #a3b18a;
-      color: white;
+      background-color: #a3b18acc;
       padding: 2rem;
       text-align: center;
       border-radius: 1rem;
-      margin-top: 1rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      margin-top: 2rem;
+      position: relative;
+      z-index: 10;
     }
-
-    .cta h3 {
+    .cta h2 {
       margin: 0 0 1rem;
-      font-size: 2rem;
     }
-
     .cta button {
       background-color: #fff;
       border: none;
       padding: 0.75rem 1.5rem;
-      font-size: 1.1rem;
+      font-size: 1rem;
       border-radius: 0.5rem;
       cursor: pointer;
-      font-weight: 700;
       color: #3e2f1c;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
     }
-
-    .cta button:hover {
-      background-color: #eae4c4;
-    }
-
     footer {
-      background-color: #fcd45c;
+      background-color: #fcd45ccc;
       text-align: center;
       padding: 1rem;
-      border-top: 3px solid #a3b18a;
-      color: #3e2f1c;
       margin-top: 2rem;
-      border-radius: 0 0 12px 12px;
+      position: relative;
+      z-index: 10;
     }
 
-    a {
-      color: #3e2f1c;
+    /* Sagome stilizzate di galline */
+    .chicken {
+      position: absolute;
+      width: 40px;
+      height: 30px;
+      background: #f4c542;
+      border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+      top: 80%;
+      animation: gentle-move 4s ease-in-out infinite;
+      z-index: 1;
+    }
+    .chicken::before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #f4c542;
+      border-radius: 50%;
+      top: -10px;
+      left: 10px;
+    }
+    .chicken::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 5px;
+      background: #d84315;
+      border-radius: 50% / 100%;
+      top: 2px;
+      left: 3px;
+      transform: rotate(20deg);
+    }
+    .chicken:nth-child(1) {
+      left: 20%;
+      animation-delay: 0s;
+    }
+    .chicken:nth-child(2) {
+      left: 50%;
+      animation-delay: 2s;
+    }
+    .chicken:nth-child(3) {
+      left: 75%;
+      animation-delay: 1s;
+    }
+
+    /* Uova stilizzate */
+    .egg {
+      position: absolute;
+      width: 15px;
+      height: 20px;
+      background: #fff9c4;
+      border-radius: 50% 50% 60% 60% / 70% 70% 50% 50%;
+      top: 85%;
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+    .egg:nth-child(4) {
+      left: 30%;
+    }
+    .egg:nth-child(5) {
+      left: 60%;
+    }
+
+    @keyframes gentle-move {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Chioccia Mia!</h1>
-      <p>Uova biologiche con amore, dal nostro nido al tuo</p>
-    </header>
-    <nav>
-      <a href="#chi-siamo">Chi siamo</a>
-      <a href="#prodotti">Prodotti</a>
-      <a href="#abbonamenti">Abbonamenti</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
-    <section id="chi-siamo">
-      <h2>Chi siamo</h2>
-      <p>
-        Alleviamo galline biologiche con cura e rispetto, in un ambiente naturale che valorizza il benessere degli animali.
-        Le nostre uova di qualità superiore arrivano fresche direttamente dal nostro nido a casa tua, garantendo genuinità e sapore autentico.
-      </p>
-    </section>
-    <section id="prodotti">
-      <h2>Prodotti</h2>
-      <p>
-        Vendiamo uova biologiche a privati, negozi, bar e ristoranti, oltre a galli e galline ornamentali di razze esclusive.
-        Offriamo anche uova fecondate di queste razze per chi desidera allevare.
-      </p>
-    </section>
-    <section id="abbonamenti">
-      <h2>Abbonamenti</h2>
-      <p>Un’opzione speciale per restare vicino al nostro allevamento: con l’abbonamento ricevi uova fresche direttamente dal tuo “nido” e sostieni il nostro lavoro.</p>
-      <div class="cta">
-        <h3>€200 / anno</h3>
-        <p>6 uova biologiche alla settimana, consegna a domicilio.</p>
-        <button>Pre-ordina ora</button>
-      </div>
-    </section>
-    <section id="contatti">
-      <h2>Contattaci</h2>
-      <p>Per informazioni o ordini scrivici a <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a> oppure chiamaci al <strong>+39 333 1234567</strong>.</p>
-    </section>
-    <footer>
-      <p>&copy; 2025 Chioccia Mia. Tutti i diritti riservati.</p>
-    </footer>
-  </main>
+  <header>
+    <h1>Chioccia Mia!</h1>
+    <p>Uova biologiche con amore, dal nostro nido al tuo</p>
+  </header>
+  <nav>
+    <a href="#chi-siamo">Chi siamo</a>
+    <a href="#prodotti">Prodotti</a>
+    <a href="#abbonamenti">Abbonamenti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+
+  <section id="chi-siamo">
+    <h2>Chi siamo</h2>
+    <p>
+      Siamo un allevamento biologico che rispetta il benessere delle galline e l'ambiente. Le nostre uova fresche arrivano direttamente dal nostro nido a casa tua, garantendo qualità e genuinità.
+    </p>
+  </section>
+
+  <section id="prodotti">
+    <h2>Prodotti</h2>
+    <p>
+      Vendiamo uova biologiche a privati, negozi, bar e ristoranti. Offriamo anche galli e galline ornamentali di razze esclusive e uova fecondate di queste razze.
+    </p>
+  </section>
+
+  <section id="abbonamenti">
+    <h2>Abbonamenti</h2>
+    <p>
+      Il nostro servizio di abbonamento “Adotta una gallina” è un’opzione in più per i clienti che desiderano un contatto speciale con il nostro allevamento.
+    </p>
+    <div class="cta">
+      <h2>€200/anno</h2>
+      <p>Abbonati ora e ricevi ogni settimana un dono dal nostro nido</p>
+      <button>Pre-ordina</button>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <h2>Contattaci</h2>
+    <p>Per informazioni, scrivi a <a href="mailto:info@chiocciamia.it">info@chiocciamia.it</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Chioccia Mia. Tutti i diritti riservati.</p>
+  </footer>
+
+  <!-- Sfondo animato galline e uova -->
+  <div class="chicken"></div>
+  <div class="chicken"></div>
+  <div class="chicken"></div>
+
+  <div class="egg"></div>
+  <div class="egg"></div>
 </body>
 </html>
