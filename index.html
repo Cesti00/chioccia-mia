@@ -2,113 +2,125 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chioccia Mia!</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to top, #4caf50 0%, #81c784 100%);
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80'); /* prato vero */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center bottom;
+      color: #3e2f1c;
       position: relative;
       overflow-x: hidden;
-      color: #3e2f1c;
     }
-    header {
-      background-color: #fcd45ccc; /* leggermente trasparente per vedere lo sfondo */
-      padding: 2rem;
-      text-align: center;
+    header, nav, section, footer {
+      background-color: rgba(255, 248, 225, 0.85); /* sfondo chiaro semitrasparente */
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 1rem auto;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       position: relative;
       z-index: 10;
     }
     header h1 {
       font-size: 3rem;
       margin: 0;
+      text-align: center;
+    }
+    header p {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: 500;
     }
     nav {
       text-align: center;
-      margin-top: 1rem;
-      position: relative;
-      z-index: 10;
+      margin-top: 0;
+      padding-bottom: 0;
     }
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.5rem;
       text-decoration: none;
       color: #3e2f1c;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 1.1rem;
     }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      background-color: #fff8e1cc; /* sfondo chiaro semitrasparente per leggibilità */
-      border-radius: 10px;
-      position: relative;
-      z-index: 10;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
+    section h2 {
+      margin-top: 0;
+      font-weight: 700;
+      font-size: 2rem;
+      border-bottom: 2px solid #a3b18a;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
     .cta {
       background-color: #a3b18acc;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem;
       border-radius: 1rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 10;
+      margin-top: 1rem;
     }
     .cta h2 {
-      margin: 0 0 1rem;
+      margin: 0 0 1rem 0;
+      font-size: 2rem;
     }
     .cta button {
       background-color: #fff;
       border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
       border-radius: 0.5rem;
       cursor: pointer;
+      font-weight: 700;
       color: #3e2f1c;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .cta button:hover {
+      background-color: #fcd45c;
     }
     footer {
-      background-color: #fcd45ccc;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 10;
+      font-size: 0.9rem;
+      color: #5a4c20;
+      margin-bottom: 2rem;
+      padding: 1rem 0;
     }
 
-    /* Sagome stilizzate di galline */
+    /* Galline stilizzate */
     .chicken {
-      position: absolute;
-      width: 40px;
-      height: 30px;
+      position: fixed;
+      width: 60px;
+      height: 45px;
       background: #f4c542;
       border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
-      top: 80%;
+      top: 75%;
       animation: gentle-move 4s ease-in-out infinite;
-      z-index: 1;
+      z-index: 5;
+      filter: drop-shadow(1px 2px 1px rgba(0,0,0,0.15));
     }
     .chicken::before {
       content: '';
       position: absolute;
-      width: 15px;
-      height: 15px;
+      width: 25px;
+      height: 25px;
       background: #f4c542;
       border-radius: 50%;
-      top: -10px;
-      left: 10px;
+      top: -15px;
+      left: 15px;
     }
     .chicken::after {
       content: '';
       position: absolute;
-      width: 10px;
-      height: 5px;
+      width: 15px;
+      height: 7px;
       background: #d84315;
       border-radius: 50% / 100%;
-      top: 2px;
-      left: 3px;
+      top: 4px;
+      left: 5px;
       transform: rotate(20deg);
     }
     .chicken:nth-child(1) {
@@ -116,7 +128,7 @@
       animation-delay: 0s;
     }
     .chicken:nth-child(2) {
-      left: 50%;
+      left: 55%;
       animation-delay: 2s;
     }
     .chicken:nth-child(3) {
@@ -126,14 +138,15 @@
 
     /* Uova stilizzate */
     .egg {
-      position: absolute;
-      width: 15px;
-      height: 20px;
+      position: fixed;
+      width: 25px;
+      height: 35px;
       background: #fff9c4;
       border-radius: 50% 50% 60% 60% / 70% 70% 50% 50%;
       top: 85%;
-      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
-      z-index: 1;
+      box-shadow: inset 4px 4px 8px rgba(0,0,0,0.1);
+      z-index: 5;
+      filter: drop-shadow(0 2px 1px rgba(0,0,0,0.1));
     }
     .egg:nth-child(4) {
       left: 30%;
@@ -144,7 +157,7 @@
 
     @keyframes gentle-move {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+      50% { transform: translateY(-8px); }
     }
   </style>
 </head>
@@ -195,7 +208,6 @@
     <p>&copy; 2025 Chioccia Mia. Tutti i diritti riservati.</p>
   </footer>
 
-  <!-- Sfondo animato galline e uova -->
   <div class="chicken"></div>
   <div class="chicken"></div>
   <div class="chicken"></div>
