@@ -2,47 +2,93 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chioccia Mia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chioccia Mia - Uova biologiche dal nostro nido al tuo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="navbar">
-    <img src="logo.jpg" alt="Logo Chioccia Mia" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="#chi-siamo">Chi siamo</a></li>
-        <li><a href="#servizi">Servizi</a></li>
-        <li><a href="#prodotti">Prodotti</a></li>
-        <li><a href="#contatti">Contatti</a></li>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Logo Chioccia Mia" class="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">Chi siamo</a></li>
+        <li><a href="#services">Servizi</a></li>
+        <li><a href="#subscription">Adotta una gallina</a></li>
+        <li><a href="#contact">Contatti</a></li>
       </ul>
     </nav>
+
+    <div class="hero-content">
+      <h1 class="site-name">Chioccia Mia</h1>
+      <p class="slogan">Dal nostro nido al tuo</p>
+      <a href="#subscription" class="btn-primary">Scopri di più</a>
+    </div>
   </header>
 
-  <main class="main-content">
-    <h1 class="titolo">Chioccia Mia</h1>
-    <p class="slogan">Dal nostro nido al tuo</p>
-
-    <section id="chi-siamo">
-      <h2>Chi siamo</h2>
-      <p>Siamo un'azienda agricola a conduzione familiare, dedita all’allevamento sostenibile e al benessere animale.</p>
+  <main>
+    <section id="about" class="section fade-in">
+      <div class="container">
+        <h2>Chi siamo</h2>
+        <p>
+          Chioccia Mia è un’azienda agricola a conduzione familiare specializzata nella produzione di uova biologiche di alta qualità.
+          Ci impegniamo a rispettare il benessere delle nostre galline, garantendo loro spazio, aria pulita e alimentazione naturale.
+        </p>
+      </div>
     </section>
 
-    <section id="servizi">
-      <h2>Servizi</h2>
-      <p>Offriamo uova biologiche, adozione galline, laboratori per scuole e collaborazioni con associazioni sociali.</p>
+    <section id="services" class="section alt-bg fade-in">
+      <div class="container">
+        <h2>I nostri servizi</h2>
+        <div class="services-grid">
+          <div class="service-box">
+            <h3>Uova biologiche fresche</h3>
+            <p>Consegniamo uova biologiche fresche ogni settimana a privati, negozi e ristoranti locali.</p>
+          </div>
+          <div class="service-box">
+            <h3>Galline felici</h3>
+            <p>Le nostre galline vivono libere in ampi spazi, nutrite con mangimi naturali e curate con grande attenzione.</p>
+          </div>
+          <div class="service-box">
+            <h3>Servizio di consegna</h3>
+            <p>Offriamo un servizio di consegna settimanale a domicilio per la comodità dei nostri clienti.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="prodotti">
-      <h2>Prodotti</h2>
-      <p>Uova fresche, galline ornamentali, humus di lombrico e fertilizzanti naturali da lombricoltura.</p>
+    <section id="subscription" class="section fade-in">
+      <div class="container">
+        <h2>Adotta una gallina</h2>
+        <p>
+          Sostieni il nostro allevamento con il programma "Adotta una gallina": con una donazione una tantum riceverai
+          ogni settimana uova fresche direttamente a casa tua, per un anno intero.
+        </p>
+        <a href="#contact" class="btn-secondary">Richiedi informazioni</a>
+      </div>
     </section>
 
-    <section id="contatti">
-      <h2>Contattaci</h2>
-      <p>Email: info@chiocciamia.it<br />Telefono: 333-1234567</p>
+    <section id="contact" class="section alt-bg fade-in">
+      <div class="container">
+        <h2>Contattaci</h2>
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="Nome" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Scrivici un messaggio..." required></textarea>
+          <button type="submit" class="btn-primary">Invia</button>
+        </form>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Chioccia Mia - Tutti i diritti riservati</p>
+      <p>info@chiocciamia.it | Via della Fattoria 12, Campagna Felice</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
