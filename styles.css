@@ -1,114 +1,178 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Nunito', sans-serif;
-  background-color: #fffaf0;
+  line-height: 1.6;
   color: #333;
+  background-color: #fffdf6;
 }
 
 header#hero {
-  height: 100vh;
-  background: linear-gradient(to bottom right, #f9e5c6, #fcebd5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(to bottom, #fff5dc, #ffffff);
   text-align: center;
-  flex-direction: column;
-  padding: 20px;
+  padding: 6rem 1rem 4rem;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #86592d;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #86592d;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c2782b;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 5rem;
 }
 
 .site-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 900;
-  margin: 0;
+  color: #86592d;
 }
 
 .slogan {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin: 10px 0 30px 0;
+  font-size: 1.5rem;
+  color: #c2782b;
+  margin-top: 1rem;
   opacity: 0;
-  transform: translateY(20px);
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-primary {
-  background-color: #e67e22;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: background-color 0.3s;
+  background-color: #86592d;
+  color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #cf711f;
+  background-color: #c2782b;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #86592d;
+  border: 2px solid #86592d;
+}
+
+.btn-secondary:hover {
+  background-color: #86592d;
+  color: #fff;
 }
 
 section {
-  padding: 60px 20px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
 .alt-bg {
   background-color: #fdf6ec;
 }
 
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .service-box {
-  background-color: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
+  background: #fff;
   border-radius: 8px;
-  font-size: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.contact-form button {
-  width: 100%;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 footer {
+  background-color: #f3eee7;
+  padding: 2rem 1rem;
   text-align: center;
-  padding: 30px;
   font-size: 0.9rem;
-  background-color: #fcebd5;
+  color: #555;
 }
 
-/* ANIMAZIONI */
+/* Animazioni */
+
 @keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-20px);
-  }
-  80% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(100px) scale(0.8); }
+  60% { opacity: 1; transform: translateY(-10px) scale(1.05); }
+  80% { transform: translateY(5px) scale(0.97); }
+  100% { transform: translateY(0) scale(1); }
 }
 
-.slogan.bounce-in {
-  animation: bounceIn 1s ease-out forwards;
+.bounce-in {
+  animation: bounceIn 1s ease forwards;
+}
+
+/* Fade-in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
