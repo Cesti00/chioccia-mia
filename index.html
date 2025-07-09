@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chioccia Mia - Uova biologiche dal nostro nido al tuo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
     <div class="header-content">
-      <h1>Chioccia Mia</h1>
       <p class="slogan">Dal nostro nido al tuo</p>
+      <h1>Chioccia Mia</h1>
     </div>
-    <nav>
+    <nav class="navbar">
       <ul class="nav-links">
         <li><a href="#about">Chi siamo</a></li>
         <li><a href="#services">Servizi</a></li>
@@ -23,45 +23,65 @@
     </nav>
   </header>
 
-  <main>
-    <section id="about" class="fade-in">
+  <section id="about">
+    <div class="container">
       <h2>Chi siamo</h2>
       <p>
-        Siamo una piccola azienda agricola familiare, con passione per il biologico e il benessere delle nostre galline. Crediamo nella qualità, nell’ambiente e nel rispetto della natura. Da noi le galline vivono libere e felici, e le uova che producono sono genuine e nutrienti.
+        Chioccia Mia è una piccola azienda agricola a conduzione familiare. Il nostro obiettivo è semplice:
+        produrre uova biologiche di altissima qualità nel pieno rispetto del benessere animale e dell’ambiente.
+        Le nostre galline vivono libere, nutrite con mangimi naturali e curate con amore.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section id="services" class="fade-in">
-      <h2>Servizi</h2>
-      <ul>
-        <li><strong>Vendita uova biologiche:</strong> uova fresche raccolte ogni giorno, consegnate a domicilio o nei negozi locali.</li>
-        <li><strong>Allevamento etico:</strong> spazi aperti, mangimi naturali e attenzione continua al benessere animale.</li>
-        <li><strong>Consegna puntuale:</strong> servizio settimanale che porta le uova fresche direttamente a casa tua.</li>
-      </ul>
-    </section>
+  <section id="services" class="alt-bg">
+    <div class="container">
+      <h2>Cosa facciamo</h2>
+      <div class="services-grid">
+        <div class="service-box">
+          <h3>Uova biologiche</h3>
+          <p>Vendiamo uova fresche ogni settimana a privati, negozi e ristoranti locali.</p>
+        </div>
+        <div class="service-box">
+          <h3>Galline felici</h3>
+          <p>Alle nostre galline garantiamo libertà, spazio, riparo, cura e alimentazione biologica.</p>
+        </div>
+        <div class="service-box">
+          <h3>Consegna a domicilio</h3>
+          <p>Consegniamo settimanalmente le uova direttamente a casa tua.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="subscription" class="fade-in">
-      <h2>Adotta una Gallina</h2>
+  <section id="subscription">
+    <div class="container">
+      <h2>Adotta una gallina</h2>
       <p>
-        Vuoi sostenere il nostro progetto? Con il servizio "Adotta una Gallina" riceverai una fornitura settimanale di uova biologiche per un anno, direttamente a casa tua. Aiuti le nostre galline a vivere meglio e a produrre uova di qualità.
+        Con il nostro servizio "Adotta una gallina", puoi sostenere l'allevamento sostenibile con una donazione una tantum.
+        In cambio riceverai ogni settimana una confezione di uova fresche, per un anno, direttamente a casa tua.
       </p>
-      <a href="#contact" class="btn-secondary">Richiedi informazioni</a>
-    </section>
+      <a href="#contact" class="btn-secondary">Richiedi info</a>
+    </div>
+  </section>
 
-    <section id="contact" class="fade-in">
-      <h2>Contatti</h2>
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Messaggio inviato!'); this.reset();">
+  <section id="contact" class="alt-bg">
+    <div class="container">
+      <h2>Contattaci</h2>
+      <form class="contact-form">
         <input type="text" placeholder="Nome" required />
         <input type="email" placeholder="Email" required />
         <textarea placeholder="Scrivici un messaggio..." required></textarea>
         <button type="submit" class="btn-primary">Invia</button>
       </form>
-      <p class="contact-info">Email: info@chiocciamia.it | Via della Fattoria 12, Campagna Felice</p>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Chioccia Mia - Tutti i diritti riservati</p>
+    <div class="container">
+      <p>&copy; 2025 Chioccia Mia - Tutti i diritti riservati</p>
+      <p>info@chiocciamia.it | Via della Fattoria 12, Campagna Felice</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
