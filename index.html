@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chioccia Mia - Uova biologiche dal nostro nido al tuo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
+  <header id="hero">
     <nav class="navbar">
       <div class="logo-container">
         <img src="logo.jpg" alt="Logo Chioccia Mia" class="logo" />
@@ -16,67 +16,66 @@
       <ul class="nav-links">
         <li><a href="#about">Chi siamo</a></li>
         <li><a href="#services">Servizi</a></li>
-        <li><a href="#subscription">Adotta una gallina</a></li>
+        <li><a href="#subscription">Adotta una Gallina</a></li>
         <li><a href="#contact">Contatti</a></li>
       </ul>
     </nav>
 
     <div class="hero-content">
-      <h1 class="site-name">Chioccia Mia</h1>
+      <h1 class="site-title">Chioccia Mia</h1>
       <p class="slogan">Dal nostro nido al tuo</p>
       <a href="#subscription" class="btn-primary">Scopri di più</a>
     </div>
   </header>
 
   <main>
-    <section id="about" class="section fade-in">
+    <section id="about" class="section fade-section">
       <div class="container">
         <h2>Chi siamo</h2>
         <p>
-          Chioccia Mia è un’azienda agricola a conduzione familiare specializzata nella produzione di uova biologiche di alta qualità.
-          Ci impegniamo a rispettare il benessere delle nostre galline, garantendo loro spazio, aria pulita e alimentazione naturale.
+          Chioccia Mia è una piccola azienda agricola a conduzione familiare, dedicata alla produzione di uova biologiche di altissima qualità.
+          Il nostro impegno è garantire il benessere delle nostre galline e la sostenibilità ambientale, offrendo prodotti genuini e freschi.
         </p>
       </div>
     </section>
 
-    <section id="services" class="section alt-bg fade-in">
+    <section id="services" class="section alt-bg fade-section">
       <div class="container">
-        <h2>I nostri servizi</h2>
+        <h2>Cosa facciamo</h2>
         <div class="services-grid">
           <div class="service-box">
-            <h3>Uova biologiche fresche</h3>
-            <p>Consegniamo uova biologiche fresche ogni settimana a privati, negozi e ristoranti locali.</p>
+            <h3>Uova biologiche</h3>
+            <p>Vendita settimanale di uova fresche a privati, negozi e ristoranti locali.</p>
           </div>
           <div class="service-box">
             <h3>Galline felici</h3>
-            <p>Le nostre galline vivono libere in ampi spazi, nutrite con mangimi naturali e curate con grande attenzione.</p>
+            <p>Le nostre galline vivono libere, nutrite con mangimi biologici e curate con amore.</p>
           </div>
           <div class="service-box">
-            <h3>Servizio di consegna</h3>
-            <p>Offriamo un servizio di consegna settimanale a domicilio per la comodità dei nostri clienti.</p>
+            <h3>Consegna a domicilio</h3>
+            <p>Ricevi comodamente a casa tua le nostre uova fresche ogni settimana.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="subscription" class="section fade-in">
+    <section id="subscription" class="section fade-section">
       <div class="container">
         <h2>Adotta una gallina</h2>
         <p>
-          Sostieni il nostro allevamento con il programma "Adotta una gallina": con una donazione una tantum riceverai
-          ogni settimana uova fresche direttamente a casa tua, per un anno intero.
+          Sostieni il nostro allevamento sostenibile con una donazione unica e ricevi ogni settimana una confezione di uova fresche direttamente a casa tua, per un anno.
         </p>
-        <a href="#contact" class="btn-secondary">Richiedi informazioni</a>
+        <a href="#contact" class="btn-secondary">Richiedi info</a>
       </div>
     </section>
 
-    <section id="contact" class="section alt-bg fade-in">
+    <section id="contact" class="section alt-bg fade-section">
       <div class="container">
         <h2>Contattaci</h2>
-        <form class="contact-form" id="contactForm">
-          <input type="text" name="name" placeholder="Nome" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" placeholder="Scrivici un messaggio..." required></textarea>
+        <form class="contact-form">
+          <input type="text" placeholder="Nome" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Scrivici un messaggio..." required></textarea>
           <button type="submit" class="btn-primary">Invia</button>
         </form>
       </div>
