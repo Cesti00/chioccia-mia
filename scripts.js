@@ -1,6 +1,8 @@
-window.addEventListener("DOMContentLoaded", () => {
-  // Rimbalzo slogan con ritardo
-  const slogan = document.querySelector("header p.slogan");
+window.addEventListener('load', () => {
+  const slogan = document.querySelector('.slogan');
   if (slogan) {
     setTimeout(() => {
-      slogan.classList.add
+      slogan.classList.add('bounce');
+    }, 500); // apparizione con ritardo mezzo secondo
+  }
+});
