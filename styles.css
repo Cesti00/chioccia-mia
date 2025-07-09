@@ -1,207 +1,189 @@
-/* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Font e reset */
 body {
   font-family: 'Nunito', sans-serif;
-  background-color: #fffdf6;
-  color: #5a3e1b;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #fefbf7;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Header */
 header {
-  background: #f5e9d4;
-  padding: 2rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-}
-
-.header-content {
+  background: #e7d7a7;
+  padding: 30px 20px 15px;
   text-align: center;
-  flex: 1 1 300px;
-  order: 2;
+  position: relative;
 }
 
-header h1 {
+.header-content h1 {
+  font-size: 3.5rem;
+  margin: 0;
   font-weight: 900;
-  font-size: 3rem;
-  margin-bottom: 0.3rem;
-  color: #86592d;
+  color: #5b3a00;
 }
 
-header p.slogan {
-  font-size: 1.5rem;
-  color: #c2782b;
-  opacity: 0;
-  transform-origin: center bottom;
+.header-content .slogan {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #8a6e2f;
+  margin-bottom: 10px;
+  opacity: 0; /* inizialmente nascosto per animazione */
+  display: inline-block;
 }
 
-/* Nav */
-nav {
-  flex: 1 1 300px;
-  order: 1;
-  text-align: right;
+/* Navbar */
+.navbar {
+  margin-top: 15px;
 }
 
 .nav-links {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  gap: 35px;
   font-weight: 700;
-  font-size: 1.1rem;
 }
 
-.nav-links a {
-  color: #86592d;
+.nav-links li a {
   text-decoration: none;
+  color: #5b3a00;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #c2782b;
-  text-decoration: underline;
+.nav-links li a:hover {
+  color: #a18f53;
 }
 
-/* Main */
-main {
-  flex: 1;
-  padding: 3rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Sections */
+/* Sezioni */
 section {
-  margin-bottom: 3rem;
+  padding: 40px 20px;
 }
 
-section h2 {
+.alt-bg {
+  background: #f4efd3;
+}
+
+h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #c2782b;
-  display: inline-block;
-  padding-bottom: 0.3rem;
+  margin-bottom: 15px;
+  color: #5b3a00;
 }
 
-/* List servizi */
-ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
+.services-grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-ul li {
-  margin-bottom: 0.8rem;
-}
-
-/* Bottoni */
-.btn-primary, .btn-secondary {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  font-weight: 700;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
+.service-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
   text-align: center;
 }
 
+.service-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #7a5c00;
+}
+
+/* Pulsanti */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
 .btn-primary {
-  background-color: #c2782b;
+  background-color: #8a6e2f;
   color: white;
+  border: none;
 }
 
 .btn-primary:hover {
-  background-color: #86592d;
+  background-color: #a18f53;
 }
 
 .btn-secondary {
-  background-color: #f5e9d4;
-  color: #86592d;
-  border: 2px solid #86592d;
+  background-color: transparent;
+  border: 2px solid #8a6e2f;
+  color: #8a6e2f;
 }
 
 .btn-secondary:hover {
-  background-color: #c2782b;
+  background-color: #8a6e2f;
   color: white;
 }
 
 /* Form contatti */
 .contact-form {
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 450px;
+  gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.7rem;
-  border: 1.5px solid #c2782b;
-  border-radius: 6px;
-  font-size: 1rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-family: 'Nunito', sans-serif;
-  resize: vertical;
+  font-size: 1rem;
 }
 
 .contact-form button {
-  width: 120px;
-  align-self: flex-start;
-}
-
-/* Info contatti */
-.contact-info {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #86592d;
+  max-width: 150px;
+  align-self: center;
 }
 
 /* Footer */
 footer {
-  background-color: #f5e9d4;
+  background: #e7d7a7;
+  padding: 20px;
   text-align: center;
-  padding: 1.2rem 0;
-  font-size: 0.9rem;
-  color: #86592d;
-  box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.1);
+  color: #5b3a00;
+  font-weight: 700;
 }
 
-/* Animazioni */
-
-/* Bounce-in per slogan */
+/* Animazione rimbalzo per slogan */
 @keyframes bounceIn {
-  0%   {opacity: 0; transform: translateY(100px) scale(0.8);}
-  60%  {opacity: 1; transform: translateY(-10px) scale(1.05);}
-  80%  {transform: translateY(5px) scale(0.97);}
-  100% {transform: translateY(0) scale(1);}
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(15px);
+  }
+  80% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.bounce-in {
+.slogan.bounce {
   animation: bounceIn 1s ease forwards;
-}
-
-/* Fade-in per sezioni */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(40px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-.fade-in {
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 0.2s;
-  margin-bottom: 3rem;
 }
