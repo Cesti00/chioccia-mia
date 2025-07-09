@@ -2,89 +2,42 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chioccia Mia - Uova biologiche dal nostro nido al tuo</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chioccia Mia</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header id="hero">
-    <nav class="navbar">
-      <div class="logo">Chioccia Mia</div>
-      <ul class="nav-links">
-        <li><a href="#about">Chi siamo</a></li>
-        <li><a href="#services">Servizi</a></li>
-        <li><a href="#subscription">Adotta una Gallina</a></li>
-        <li><a href="#contact">Contatti</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <h1 class="hero-title">Chioccia Mia</h1>
+  <header class="fade-in">
+    <div class="container">
+      <h1 class="logo">Chioccia Mia</h1>
       <p class="slogan">Dal nostro nido al tuo</p>
-      <p class="hero-subtext">Uova biologiche da galline felici. Consegne settimanali a domicilio.</p>
-      <a href="#subscription" class="btn-primary">Scopri di più</a>
     </div>
   </header>
 
-  <section id="about">
+  <section class="fade-in">
     <div class="container">
       <h2>Chi siamo</h2>
-      <p>
-        Chioccia Mia è una piccola azienda agricola a conduzione familiare. Il nostro obiettivo è semplice:
-        produrre uova biologiche di altissima qualità nel pieno rispetto del benessere animale e dell’ambiente.
-        Le nostre galline vivono libere, nutrite con mangimi naturali e curate con amore.
-      </p>
+      <p>Chioccia Mia è un'azienda agricola familiare che offre uova biologiche prodotte nel rispetto delle galline e dell'ambiente.</p>
     </div>
   </section>
 
-  <section id="services" class="alt-bg">
+  <section class="fade-in">
     <div class="container">
-      <h2>Cosa facciamo</h2>
-      <div class="services-grid">
-        <div class="service-box">
-          <h3>Uova biologiche</h3>
-          <p>Vendiamo uova fresche ogni settimana a privati, negozi e ristoranti locali.</p>
-        </div>
-        <div class="service-box">
-          <h3>Galline felici</h3>
-          <p>Alle nostre galline garantiamo libertà, spazio, riparo, cura e alimentazione biologica.</p>
-        </div>
-        <div class="service-box">
-          <h3>Consegna a domicilio</h3>
-          <p>Consegniamo settimanalmente le uova direttamente a casa tua.</p>
-        </div>
-      </div>
+      <h2>I nostri servizi</h2>
+      <ul>
+        <li>Vendita di uova biologiche</li>
+        <li>Consegna a domicilio</li>
+        <li>Adozione di galline</li>
+      </ul>
     </div>
   </section>
 
-  <section id="subscription">
+  <footer class="fade-in">
     <div class="container">
-      <h2>Adotta una gallina</h2>
-      <p>
-        Con il nostro servizio "Adotta una gallina", puoi sostenere l'allevamento sostenibile con una donazione una tantum.
-        In cambio riceverai ogni settimana una confezione di uova fresche, per un anno, direttamente a casa tua.
-      </p>
-      <a href="#contact" class="btn-secondary">Richiedi info</a>
-    </div>
-  </section>
-
-  <section id="contact" class="alt-bg">
-    <div class="container">
-      <h2>Contattaci</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Nome" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Scrivici un messaggio..." required></textarea>
-        <button type="submit" class="btn-primary">Invia</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Chioccia Mia - Tutti i diritti riservati</p>
-      <p>info@chiocciamia.it | Via della Fattoria 12, Campagna Felice</p>
+      <p>&copy; 2025 Chioccia Mia</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
