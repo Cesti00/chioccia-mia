@@ -1,3 +1,4 @@
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -6,173 +7,201 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  line-height: 1.6;
-  color: #333;
   background-color: #fffdf6;
+  color: #5a3e1b;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header#hero {
-  background: linear-gradient(to bottom, #fff5dc, #ffffff);
-  text-align: center;
-  padding: 6rem 1rem 4rem;
-  position: relative;
-}
-
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background: transparent;
+/* Header */
+header {
+  background: #f5e9d4;
+  padding: 2rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
 }
 
-.logo {
-  font-size: 1.5rem;
+.header-content {
+  text-align: center;
+  flex: 1 1 300px;
+  order: 2;
+}
+
+header h1 {
   font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
   color: #86592d;
+}
+
+header p.slogan {
+  font-size: 1.5rem;
+  color: #c2782b;
+  opacity: 0;
+  transform-origin: center bottom;
+}
+
+/* Nav */
+nav {
+  flex: 1 1 300px;
+  order: 1;
+  text-align: right;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: #86592d;
-  font-weight: bold;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #c2782b;
+  text-decoration: underline;
 }
 
-.hero-content {
-  max-width: 800px;
+/* Main */
+main {
+  flex: 1;
+  padding: 3rem;
+  max-width: 900px;
   margin: 0 auto;
-  padding-top: 5rem;
 }
 
-.site-title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #86592d;
+/* Sections */
+section {
+  margin-bottom: 3rem;
 }
 
-.slogan {
-  font-size: 1.5rem;
-  color: #c2782b;
-  margin-top: 1rem;
-  opacity: 0;
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #c2782b;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
 
+/* List servizi */
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+}
+
+/* Bottoni */
 .btn-primary, .btn-secondary {
   display: inline-block;
-  margin-top: 2rem;
   padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 25px;
   border: none;
-  border-radius: 5px;
-  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-align: center;
 }
 
 .btn-primary {
-  background-color: #86592d;
-  color: #fff;
+  background-color: #c2782b;
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #c2782b;
+  background-color: #86592d;
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background-color: #f5e9d4;
   color: #86592d;
   border: 2px solid #86592d;
 }
 
 .btn-secondary:hover {
-  background-color: #86592d;
-  color: #fff;
+  background-color: #c2782b;
+  color: white;
 }
 
-section {
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.alt-bg {
-  background-color: #fdf6ec;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.service-box {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
+/* Form contatti */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 450px;
 }
 
-.contact-form input, .contact-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem;
+  border: 1.5px solid #c2782b;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  resize: vertical;
 }
 
-footer {
-  background-color: #f3eee7;
-  padding: 2rem 1rem;
-  text-align: center;
+.contact-form button {
+  width: 120px;
+  align-self: flex-start;
+}
+
+/* Info contatti */
+.contact-info {
+  margin-top: 1rem;
   font-size: 0.9rem;
-  color: #555;
+  color: #86592d;
+}
+
+/* Footer */
+footer {
+  background-color: #f5e9d4;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.9rem;
+  color: #86592d;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.1);
 }
 
 /* Animazioni */
 
+/* Bounce-in per slogan */
 @keyframes bounceIn {
-  0% { opacity: 0; transform: translateY(100px) scale(0.8); }
-  60% { opacity: 1; transform: translateY(-10px) scale(1.05); }
-  80% { transform: translateY(5px) scale(0.97); }
-  100% { transform: translateY(0) scale(1); }
+  0%   {opacity: 0; transform: translateY(100px) scale(0.8);}
+  60%  {opacity: 1; transform: translateY(-10px) scale(1.05);}
+  80%  {transform: translateY(5px) scale(0.97);}
+  100% {transform: translateY(0) scale(1);}
 }
 
 .bounce-in {
   animation: bounceIn 1s ease forwards;
 }
 
-/* Fade-in on scroll */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* Fade-in per sezioni */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.fade-in {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0.2s;
+  margin-bottom: 3rem;
 }
